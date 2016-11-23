@@ -20,7 +20,7 @@ int main()
 
 	sf::Vector2<float> velocity(0, 0);
 
-	float speed = 0.5f;
+	float speed = 1.f;
 
 	Player player;
 	player.paddle = sf::RectangleShape (sf::Vector2f(10.f, 100.f));
@@ -56,9 +56,9 @@ int main()
 		if (playerPos.y < 0) player.paddle.setPosition(
 			playerPos.x + player.velocity.x * speed,
 			0);
-		else if (playerPos.y > height) player.paddle.setPosition(
+		else if (playerPos.y > height - 100) player.paddle.setPosition(
 			playerPos.x + player.velocity.x * speed,
-			height - 200); // <---- tuohon pitää saada paddle korkeus
+			height - 100); // <---- tuohon pitää saada paddle korkeus
 
 		player.paddle.setPosition(
 			playerPos.x + player.velocity.x * speed,
