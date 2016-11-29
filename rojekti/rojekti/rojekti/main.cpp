@@ -20,7 +20,7 @@ int main()
 
 	sf::Vector2<float> velocity(0, 0);
 
-	float speed = 1.f;
+	float speed = 0.5f;
 
 	Player player;
 	player.paddle = sf::RectangleShape (sf::Vector2f(10.f, 100.f));
